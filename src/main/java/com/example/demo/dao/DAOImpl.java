@@ -37,6 +37,15 @@ public class DAOImpl implements DAO {
 
     @Override
     @Transactional
+    public User findUserID(int userID) {
+        sesh = manager.unwrap(Session.class);
+        User user = sesh.get(User.class, userID);
+        return user;
+
+    }
+
+    @Override
+    @Transactional
     public boolean verifyUserExists(User user) {
         sesh = manager.unwrap(Session.class);
         List <User> usersList = sesh.createQuery("from User").list();
@@ -76,6 +85,14 @@ public class DAOImpl implements DAO {
         sesh = manager.unwrap(Session.class);
         Flashcard flashcard = sesh.get(Flashcard.class, cardID);
         sesh.delete(flashcard);
+    }
+
+    @Override
+    @Transactional
+    public void deleteUser(int userID) {
+        sesh = manager.unwrap(Session.class);
+        User user = sesh.get(User.class, userID);
+        sesh.delete(user);
     }
 
     @Override

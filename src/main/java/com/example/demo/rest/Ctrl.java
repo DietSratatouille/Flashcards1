@@ -45,6 +45,16 @@ public class Ctrl {
         return "Removed the flashcard with ID:" + cardID;
     }
 
+    @DeleteMapping("/deleteUser/{userID}")
+    public String deleteUser(@PathVariable int userID){
+        User user = dao.findUserID(userID);
+        if(user==null){
+            throw new RuntimeException("User doesn't exist");
+        }
+        dao.deleteUser(userID);
+        return "Removed user with ID:" + userID;
+    }
+
     @PostMapping("/addCard")
     public Flashcard addCard(@RequestBody Flashcard flashcard){
         flashcard.setId(0);
