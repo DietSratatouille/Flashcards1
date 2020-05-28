@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: 'http://placekitten.com/300/200%22/%3E';
 }
 
 .App-logo {
@@ -25,7 +26,30 @@
 }
 
 .App-link {
+ 
   color: #61dafb;
+}
+
+.button{
+  background-image: linear-gradient(#17d8fade,#ce7133);
+}
+.button2{
+  background-image: linear-gradient(#26f5e4de,#10f109de);
+}
+
+.footer{
+  margin-top: 59%;
+  background-image: linear-gradient(#61dafb,#282934);
+}
+
+
+.header {
+  height: 40px;
+  margin-bottom:  15px;
+  font-size: 30px;
+  justify-content: center;
+  padding: 20px;
+  background-image: linear-gradient(#61dafb,#282c34);
 }
 
 @keyframes App-logo-spin {

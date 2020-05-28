@@ -6,6 +6,7 @@ import com.example.demo.entity.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Random;
 
 @CrossOrigin(origins = {"http://localhost:3000"})
 @RestController
@@ -28,6 +29,52 @@ public class Ctrl {
         }
         return flashcard;
     }
+
+    /*
+    Random
+     */
+    @GetMapping("/randomCard")
+    public Flashcard randomCard(){
+        boolean done = false;
+
+        Flashcard randomCard = dao.randomCard();
+//        while(done){
+//            if (randomCard == null){
+//                randomCard = dao.randomCard();
+//                done = true;
+//            }
+//        }
+
+        while (randomCard==null){
+            randomCard = dao.randomCard();
+        }
+
+        //Flashcard randomCard= dao.randomCard();
+
+        return randomCard;
+    } //end randomCard retrieval
+
+    /*
+    Get just card answer
+     */
+    @GetMapping("cardAnswer/{cardID}")
+    public String cardAnswer(@PathVariable int cardID){
+        String cardAnswer = dao.displayCardAnswer(cardID);
+
+        return cardAnswer;
+    } //end cardAsnwer retrieval
+
+
+    /*
+Get just card question
+ */
+    @GetMapping("cardQuestion/{cardID}")
+    public String cardQuestion(@PathVariable int cardID){
+        String cardQuestion = dao.displayCardQuestion(cardID);
+
+        return cardQuestion;
+    } //end cardQuestion retrieval
+
 
     @DeleteMapping("/wipeAllCards")
     public String wipeCards(){

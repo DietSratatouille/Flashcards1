@@ -26,8 +26,20 @@ class CtrlServices{
         return axios.get(`http://localhost:8080/showAllCards`);
     }
 
+    getRandom(){
+        return axios.get(`http://localhost:8080/randomCard`);
+    }
+
     getCard(cardID){
         return axios.get(`http://localhost:8080/getCard/${cardID}`);
+    }
+
+    getQuestion(cardID){
+        return axios.get(`http://localhost:8080/cardQuestion/${cardID}`)
+    }
+
+    getAnswer(cardID){
+        return axios.get(`http://localhost:8080/cardAnswer/${cardID}`)
     }
 //___________________________________________________________________
 

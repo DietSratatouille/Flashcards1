@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import java.util.List;
+import java.util.Random;
 
 @Repository
 public class DAOImpl implements DAO {
@@ -101,5 +102,39 @@ public class DAOImpl implements DAO {
         sesh = manager.unwrap(Session.class);
         //sesh.createQuery("truncate table Flashcard").executeUpdate();
         sesh.createSQLQuery("truncate table Flashcard").executeUpdate();
+    }
+
+    @Override
+    @Transactional
+    public String displayCardQuestion(int cardID) {
+        sesh = manager.unwrap(Session.class);
+        Flashcard flashcard = sesh.get(Flashcard.class, cardID);
+        return  flashcard.getQuestion();
+    }
+
+    @Override
+    @Transactional
+    public String displayCardAnswer(int cardID) {
+        sesh = manager.unwrap(Session.class);
+        Flashcard flashcard = sesh.get(Flashcard.class, cardID);
+        return flashcard.getAnswer();
+    }
+
+    @Override
+    @Transactional
+    public Flashcard randomCard() {
+        sesh = manager.unwrap(Session.class);
+        List <Flashcard> tmpList = sesh.createQuery("from Flashcard").getResultList();
+
+
+        int randID = new Random().nextInt(tmpList.size()+1);
+        //cardID = randID;
+        System.out.println(randID);
+
+
+        Flashcard flashcard = sesh.get(Flashcard.class,randID);
+        System.out.println(flashcard);
+
+        return flashcard;
     }
 }
