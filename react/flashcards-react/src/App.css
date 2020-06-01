@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-image: 'http://placekitten.com/300/200%22/%3E';
+  
+
 }
 
 .App-logo {
@@ -41,6 +42,14 @@
   background-image: linear-gradient(#e26060de,#f0ab52de);
 }
 
+.flashcard{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQB3XAMegpoDMDqZ5zJDspHK_8SK5PZJw_GbNtqJwi8-cvqdQav&usqp=CAU");
+}
+
+.flashcard2{
+  background-image: url("https://lh3.googleusercontent.com/proxy/aBTo1GNimq_yOmdaiMwFNm_6prROTW-vqu7ZVN_TM3vAL8OHTNYd8mYdHRZEf91pIEftNRIA_mq_5jsqApGDZNc74PZT9X-_uxm8vMItMh3w8rAFnsFNxQoNApo751y_g4xGKci_gb3okXEdMJrLag9HbEA04Rz8IBG3c2CO-XsAJzlmAaE");
+}
+
 .footer{
   margin-top:77%;
   background-image: linear-gradient(#61dafb,#282934);
@@ -51,9 +60,12 @@
   height: 40px;
   margin-bottom:  15px;
   font-size: 30px;
+  font: bolder;
+  color: white;
+  outline-color: black;
   justify-content: center;
   padding: 20px;
-  background-image: linear-gradient(#61dafb,#282c34);
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROtWpRgNIwFLRBT0CiwUO7fu0vTFiMTeLeEjSRH30k8M9PgwC0&usqp=CAU");
 }
 
 .highlight{
@@ -62,6 +74,18 @@
 
 .jumbo {
   background-image: radial-gradient(#dee2e4,#a0a0a0);
+}
+
+.michael{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQsi81bD8EnGqeIzB3CE7MV3SQD1ZRya8cJyO1-YO9fGnjuYk0l&usqp=CAU");
+}
+
+.sjw{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRz3B4yTeIIYNAi688AM_e0lEedynWjbBjKXJ2I9euhO3jOnZtk&usqp=CAU");
+}
+
+.sjw2{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSr2SpqFUPmuKDvAdz2SHP7OuWQRqWBcrxbf0OH0kJenL8myY-L&usqp=CAU");
 }
 
 @keyframes App-logo-spin {

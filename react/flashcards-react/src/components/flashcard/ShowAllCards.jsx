@@ -30,6 +30,7 @@ class ShowAllCards extends Component{
         .then(
             response =>{
                 this.showCards();
+                window.location.reload()
             }
         )
     }
