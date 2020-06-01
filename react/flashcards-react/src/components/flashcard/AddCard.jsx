@@ -38,20 +38,20 @@ class AddCard extends Component{
                 <h2>Add New Card</h2>
                 <div>
                     <form onSubmit={this.addCard}>
-                            <div className="form-group">
+                            <div className="form-group" >
                                 <label>ID:</label>
-                                <input className="form-control table" type="text" value={this.state.id} disabled></input>
+                                <input className="form-control jumbo" type="text" value={this.state.id} disabled></input>
                             </div>
                             <div>
                                 <label>Question:</label>
-                                <input className="form-control table" type="text" name="question" onChange={this.handleChange}></input>
+                                <input className="form-control jumbo" type="text" name="question" onChange={this.handleChange}></input>
                             </div>
                             <div>
                                 <label>Answer:</label>
-                                <input className="form-control table" type="text" name="answer" onChange={this.handleChange}></input>
+                                <input className="form-control jumbo" type="text" name="answer" onChange={this.handleChange}></input>
                             </div>
                             <br/><br/>
-                            <button className="btn btn-link" style={{color:"black"}} type="submit"><Link to= '/showCards'>Submit</Link></button><br/><br/>
+                            <button className="btn btn-link button2" style={{color:"black"}} type="submit">Submit</button><br/><br/>
                         </form>
                 </div>
             </div>

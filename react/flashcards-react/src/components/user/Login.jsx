@@ -52,8 +52,8 @@ class Login extends Component{
                 <p>Password:</p>
                 <input type="text" className="text-input" value={this.state.password} onChange={this.handlePasswordChange}/>
                 <br></br>
-                <button className='btn btn-link'><Link to='/home'>Login </Link></button>
-                <button className='btn btn-link' style={{color: "black"}} type="button"><Link to="/addUser">Register</Link></button>
+                <button className='btn btn-link jumbo'><Link to='/home'>Login </Link></button>
+                <button className='btn btn-link jumbo' style={{color: "black"}} type="button"><Link to="/addUser">Register</Link></button>
 
                 
             </form>

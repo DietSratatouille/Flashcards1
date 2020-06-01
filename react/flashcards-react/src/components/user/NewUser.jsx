@@ -34,6 +34,7 @@ class NewUser extends Component{
         CtrlServices.addUser(user)
         event.preventDefault()
         console.log(user)
+        this.props.history.push("/login")
     }
 
     render(){
@@ -45,7 +46,7 @@ class NewUser extends Component{
                 <p>New Password:</p>
                 <input type="text"value={this.state.password} onChange={this.handlePassword}/>
                 <br></br>
-                <button className="btn btn-link" style={{color: "black"}}> <Link to='/login'>Submit</Link></button>
+                <button className="btn btn-link jumbo" style={{color: "black"}} type="submit">Submit</button>
             </form>
         )
     }

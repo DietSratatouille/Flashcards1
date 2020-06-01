@@ -31,14 +31,18 @@
 }
 
 .button{
-  background-image: linear-gradient(#17d8fade,#ce7133);
+  background-image: linear-gradient(#17d8fade,#727ff1);
 }
 .button2{
   background-image: linear-gradient(#26f5e4de,#10f109de);
 }
 
+.button3{
+  background-image: linear-gradient(#e26060de,#f0ab52de);
+}
+
 .footer{
-  margin-top: 59%;
+  margin-top:77%;
   background-image: linear-gradient(#61dafb,#282934);
 }
 
@@ -50,6 +54,14 @@
   justify-content: center;
   padding: 20px;
   background-image: linear-gradient(#61dafb,#282c34);
+}
+
+.highlight{
+  background-color: yellow;
+}
+
+.jumbo {
+  background-image: radial-gradient(#dee2e4,#a0a0a0);
 }
 
 @keyframes App-logo-spin {

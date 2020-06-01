@@ -28,7 +28,7 @@ class EditCard extends Component{
         let{id, question, answer} = this.state
         return(
             <div className= "container">
-                <div className= "jumbotron">
+                <div className= "jumbotron jumbo">
                     <h2> Edit Card</h2> <br></br> <br></br>
                     <Formik 
                         initialValues={{id,question,answer}}
@@ -40,19 +40,19 @@ class EditCard extends Component{
                                 <Form>
                                     <fieldset>
                                         <label>ID</label>
-                                        <Field className="form-control" type="text" name="id" disabled></Field>
+                                        <Field className="form-control highlight" type="text" name="id" disabled></Field>
                                     </fieldset>
                                     
                                     <fieldset>
                                         <label>Question</label>
-                                        <Field className="form-control" type="text" name="question"></Field>
+                                        <Field className="form-control highlight" type="text" name="question"></Field>
                                     </fieldset>
                                     
                                     <fieldset>
                                         <label>Answer</label>
-                                        <Field className="form-control" type="text" name="answer"/>
+                                        <Field className="form-control highlight" type="text" name="answer"/>
                                     </fieldset>
-                                    <button className="btn btn-link" style={{color:"black"}} type="submit">Save</button>
+                                    <button className="btn btn-link button2" style={{color:"black"}} type="submit">Save</button>
                                 </Form>
                             )
                         }

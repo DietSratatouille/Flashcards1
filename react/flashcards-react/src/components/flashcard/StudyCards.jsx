@@ -9,9 +9,10 @@ class StudyCards extends Component{
     constructor(props){
         super(props)
         this.state={
-            id: this.props.match.params.id,
-            question: [],
-            answer: ''
+            //flashcard: [],
+            //flashcard: new Object(),
+            question: '',
+            answer:''
         }
         this.showQuestionSwitch = this.showQuestionSwitch.bind(this)
         this.showAnswerSwitch = this.showAnswerSwitch.bind(this)
@@ -23,13 +24,10 @@ class StudyCards extends Component{
 
      randomFlashcard(){
          CtrlServices.getRandom()
-         CtrlServices.getQuestion(this.state.id)
          .then(
              response =>{
-                 this.setState({
-                    question:response.data
-
-                 })
+                this.setState({question:response.data.question, answer:response.data.answer})
+                 console.log({flashcard:response.data})
             }
          )
             
@@ -54,9 +52,15 @@ class StudyCards extends Component{
                 <button className='btn btn-link button2' style={{color: "black", textAlign: "right"}} type="button"><Link to="/home">Home</Link></button>
                 <br></br>
                 <br></br>
-                <div>
-                    <button className="btn btn-link" style={{color:"black"}} onClick={()=> this.showQuestionSwitch()}>Question</button>
-                    <button className="btn btn-link" style={{color:"black"}} onClick={()=> this.showAnswerSwitch()}>Answer</button>
+                <div  className="container">
+                    <h1 style={{textAlign:"center"}}>Flashcard</h1><br></br>
+                    <div className="jumbotron">
+                        <label>Question</label> <br></br>
+                        <textarea className="form-control table" type="text" rows="5" cols="70" name="question" value={this.state.question}></textarea> <br></br>
+
+                        <label>Answer</label> <br></br>
+                        <textarea className="form-control table" type="text" rows="5" cols="70" name="question" value={this.state.answer}></textarea>
+                    </div>
                 </div>
             </div>
         )

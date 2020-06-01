@@ -83,8 +83,8 @@ class ShowAllCards extends Component{
                                                 <br></br>
                                                 <br></br>
                                                 <br></br>
-                                                <td><button className="btn btn-link button" style={{color:"black"}} onClick={()=> this.deleteCard(allCards.id)}>Delete card</button></td>
-                                                <td><button className="btn btn-link" style={{color:"black"}}
+                                                <td><button className="btn btn-link button3" style={{color:"black"}} onClick={()=> this.deleteCard(allCards.id)}>Delete card</button></td>
+                                                <td><button className="btn btn-link button2" style={{color:"black"}}
                                                         onClick={()=> this.editCardSwitch(allCards.id, allCards.question, allCards.answer)}>
                                                         Edit Card
                                                     </button> 
@@ -95,8 +95,8 @@ class ShowAllCards extends Component{
                                 </tbody>
                             </div>
                             <br></br>
-                            <button className = 'btn btn-link' style={{color:"black"}} type="button"><Link to="/addCard">Add new card</Link></button>
-                            <button className="btn btn-link button" style={{color:"black"}} onClick={()=> this.deleteAll()}>Delete all cards</button>
+                            <button className = 'btn btn-link button2' style={{color:"black"}} type="button"><Link to="/addCard">Add new card</Link></button>
+                            <button className="btn btn-link button3" style={{color:"black"}} onClick={()=> this.deleteAll()}>Delete all cards</button>
                             <br></br>
                             <br></br>
                     </div>
